@@ -2,7 +2,7 @@ import React from 'react'
 
 const ListOfProduct = ({item}) => {
   return (
-    <div className=" card ">
+    <div className=" card  ">
     <div className="bg-image  hover-zoom  ">
       <img src={item.imag} className="w-100 " alt=''/>
      

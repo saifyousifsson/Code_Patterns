@@ -25,24 +25,27 @@ const ForUsd = () => {
 
     }, []);
   return (
-   <div className='container'>
-    <div className='row'>
-        <div className='col'>    
-          <div className='for-2'>
+    <div className=' d-flex'>
+   <section className='container row'>
+    <div className=' '>
+        <div className='col  '>    
+          <div className='for-2 '>
             <div className='for-usd text-center' >2 FOR USD $29</div>
             <button className='btn-flase'>FLASE SALE</button>
-          </div>
+       </div>
         </div>
-        
-        { product.length > 0 ?   product.map((item)=> 
-      <div className=" col-lg-2  ">
+          </div>
+   </section>
+   <div className='col-lg-0 row'>
+         
+        { product.length > 0  ?   product.map((item )=> 
+      <div className="pro-usd ">
        <ListOfProduct  key={item.id} item={item}/>
       </div>   
     )
        : <p>No Pouduct to show</p>
-    }
-    </div>
-   </div>
+    } </div>
+ </div>
   )
 }
 
