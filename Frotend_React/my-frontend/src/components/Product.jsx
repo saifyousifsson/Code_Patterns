@@ -34,7 +34,7 @@ const Product = () => {
     <h4 className="mt-4 mb-5"><strong>Featured Product</strong></h4>
    
     <div className="row ">
-    { product.length > 0 ?   product.map((item)=> 
+    { product.length > 0 ?   product.slice(0-8).map((item)=> 
       <div className="col-lg-3 col-md-12 mb-4  ">
        <ListOfProduct key={item.id} item={item}/>
       </div>   
