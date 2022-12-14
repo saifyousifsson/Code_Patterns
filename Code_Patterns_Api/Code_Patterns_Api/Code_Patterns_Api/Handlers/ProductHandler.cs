@@ -37,7 +37,7 @@ namespace Code_Patterns_Api.Handlers
 
         public async Task<IEnumerable<Product>> GetAllAsync()
         {   List<Product> products = _productFactory.ProductList();
-            foreach (var productEntity in await _context.products.ToListAsync()) 
+            foreach (var productEntity in await _context.products.Include(x => x.Category).ToListAsync()) 
                 products.Add(_productFactory.Product(productEntity));
             return products;
         }

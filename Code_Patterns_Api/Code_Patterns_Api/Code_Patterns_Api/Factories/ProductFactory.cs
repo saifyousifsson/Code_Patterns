@@ -24,10 +24,10 @@ namespace Code_Patterns_Api.Factory
                 Name = productEntity.Name,
                 Imag = productEntity.Imag,
                 Price = productEntity.Price,
-                //CategoryId = productEntity.Category.Id,
-                
+                CategoryId = productEntity.Category.Id,
+                CategoryName = productEntity.Category.Name,
 
-                };
+            };
             }
 
             public List<Product> ProductList()

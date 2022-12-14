@@ -8,11 +8,11 @@ const ListOfProduct = ({item}) => {
      
     </div>
     <div className="card-body mb-0">
-         <p className='mb-1 fs-5'>{item.name}</p>
+         <p className='mb-1   '>{item.categoryName}</p>
     
-        <h5 className="card-title mb-2">{item.name}</h5>
+        <p className="card-title  fs-4  mt-2 mb-2">{item.name}</p>
      
-      <h6 className="mb-1">{item.price}</h6>
+      <h6 className="mb-1">{item.price} kr</h6>
     </div>
   </div>
   )
