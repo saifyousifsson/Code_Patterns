@@ -7,7 +7,7 @@ import ListOfProduct from './ListOfProduct';
 const Product = () => {
     const [product, setProuct] = useState([]);
     useEffect(() => {
-      axios.get('https://localhost:7292/api/Prroduct',{
+      axios.get('https://localhost:7292/api/Product',{
         headers: {
           'content-type': 'application/json',
       

@@ -1,5 +1,6 @@
 ﻿using Code_Patterns_Api.Data;
 using Code_Patterns_Api.Models;
+using Code_Patterns_Api.Models.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,7 +16,7 @@ namespace Code_Patterns_Api.Controllers
             _context = context;
         }
         [HttpGet]
-        public List<Category> GetAllCategory()
+        public List<CategoryEntity> GetAllCategory()
         {
             return _context.categories.ToList();
         }

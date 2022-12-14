@@ -2,7 +2,7 @@ import React from 'react'
 import { useState,useEffect } from 'react';
 import axios from 'axios'
 import ListOfProduct from './ListOfProduct';
-const ForUsd = () => {
+const UsdFor = () => {
     const [product, setProuct] = useState([]);
     useEffect(() => {
       axios.get('https://localhost:7292/api/Product',{
@@ -27,27 +27,29 @@ const ForUsd = () => {
   return (
     <div className='container '>
     <div className=' d-flex '>
-   <section className=' row'>
-    
-        <div className='col  '>    
-          <div className='for-2 '>
-            <div className='for-usd text-center' >2 FOR USD $29</div>
-            <button className='btn-flase'>FLASE SALE</button>
-       </div>
-        </div>
-        
-   </section><div className=' coly   '>
+    <div className=' coly   '>
    <div className='row row-cols-3  '>
          
         { product.length > 0  ?   product.slice(0-4).map((item )=> 
-      <div className="pro-usd  col">
+      <div className="pro-usd-1  col">
        <ListOfProduct  key={item.id} item={item}/>
       </div>   
     )
        : <p>No Pouduct to show</p>
-    } </div>  </div>
+    } </div> 
+     </div>
+   <section className=' row '>
+    
+        <div className='col  '>    
+          <div className='for-3 '>
+            <div className='for-usd-1 text-center' >2 FOR USD $29</div>
+            <button className='btn-flase'>FLASE SALE</button>
+       </div>
+        </div>
+        
+   </section>
  </div></div>
   )
 }
 
-export default ForUsd
+export default UsdFor

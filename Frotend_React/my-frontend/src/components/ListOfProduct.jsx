@@ -8,7 +8,7 @@ const ListOfProduct = ({item}) => {
      
     </div>
     <div className="card-body mb-0">
-         <p className='mb-1 fs-5'>{item.category.name}</p>
+         <p className='mb-1 fs-5'>{item.name}</p>
     
         <h5 className="card-title mb-2">{item.name}</h5>
      

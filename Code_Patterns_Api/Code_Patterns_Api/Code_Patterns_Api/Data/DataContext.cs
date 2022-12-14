@@ -1,4 +1,4 @@
-﻿using Code_Patterns_Api.Models;
+﻿using Code_Patterns_Api.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Code_Patterns_Api.Data
@@ -9,7 +9,7 @@ namespace Code_Patterns_Api.Data
         public DataContext(DbContextOptions options) : base(options)
         {
         }
-        public DbSet<Category> categories { get; set; }
-        public DbSet<Product> products { get; set; }
+        public DbSet<CategoryEntity> categories { get; set; }
+        public DbSet<ProductEntity> products { get; set; }
     }
 }

@@ -155,11 +155,26 @@ img {
     width: 600px;
       margin-right: 58px;
   }
+  .for-3{
+    background-color: #c7c6c6;
+    height: 560px;
+     margin: 10px 0 ;
+     margin-left: 8px;
+     width: 600px;
+       margin-right: 18px;
+   }
   .for-usd{
    padding-top: 230px;  
     color: white;
     font-weight: 700;
     font-size: 40px; 
+  }
+  .for-usd-1{
+    padding-top: 230px;  
+    color: white;
+    font-weight: 700;
+    font-size: 40px; 
+
   }
   .btn-flase{
     background-color: rgb(250, 245, 245);
@@ -176,17 +191,23 @@ img {
    margin-right: 30px;
   margin-left: 10px;
   width: 275px;
-
-
+  }
+  .pro-usd-1 {
+    margin-top: 10px;
+    margin-right: 35px;
+    margin-left: 20px;
+    width: 275px;
   }
 .footer{
- width:1517px;
-margin-left: -110px;
+  width:1517px;
+  margin-left: -110px;
+  
 }
 .support{
   width:1517px;
   margin-left: -110px;
   margin-bottom: 40px;
+  margin-top: 30px;
 }
 .map{
   width:1520px;
