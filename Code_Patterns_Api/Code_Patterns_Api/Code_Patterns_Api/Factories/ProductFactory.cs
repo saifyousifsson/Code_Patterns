@@ -4,6 +4,9 @@ using Code_Patterns_Api.Models.Entities;
 
 namespace Code_Patterns_Api.Factory
 {
+
+    /// ProductFactory används för att skapa en instans av Product modellen när man skapar en Product till databas. Detta för att undvika att skapa en instans . En del av "Dependency Inversion Principle"
+    // Jag har  SRP i det här fallet och delar upp Factory Och ha det lite renare i kontrollern
     public interface IProductFactory : IFactory
     {
         ProductEntity ProductEntity();

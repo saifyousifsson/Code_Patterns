@@ -2,16 +2,19 @@
 using Code_Patterns_Api.Factory;
 using Code_Patterns_Api.Models;
 using Code_Patterns_Api.Models.Entities;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Net;
 
 namespace Code_Patterns_Api.Handlers
 {
-
+    /// ProductHandler ärver sina fält från IProductHandler, på grund av LSP,
     public interface IProductHandler
     {
         Task CreateAsync(ProductRequest product);
         Task<IEnumerable<Product>> GetAllAsync();
-        Task<ProductEntity> GettAsync(int id);
+        //Task<Product> GetAsync(int id);
     }
     public class ProductHandler :IProductHandler
     {
@@ -42,9 +45,7 @@ namespace Code_Patterns_Api.Handlers
             return products;
         }
 
-        public Task<ProductEntity> GettAsync(int id)
-        {
-            throw new NotImplementedException();
-        }
+  
+        
     }
 }

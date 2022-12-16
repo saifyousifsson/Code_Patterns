@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Code_Patterns_Api.Controllers
 {
+    //  Den här Controlleren bidrar också i DRY, jag behöver inte upprepa
+
     [Route("api/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase
