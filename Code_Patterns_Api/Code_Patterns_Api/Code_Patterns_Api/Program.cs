@@ -3,8 +3,8 @@ using Code_Patterns_Api.Factories;
 using Code_Patterns_Api.Factory;
 using Code_Patterns_Api.Handlers;
 using Code_Patterns_Api.Interfaces;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+
 
 
 var builder = WebApplication.CreateBuilder(args);

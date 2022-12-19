@@ -2,38 +2,35 @@
 using Code_Patterns_Api.Models;
 using Code_Patterns_Api.Models.Entities;
 
-namespace Code_Patterns_Api.Factories
+namespace Code_Patterns_Api.Factories;
+
+// INTERFACE SEGGREGATION
+/// CategoryFactory används för att skapa en instans av Category modellen när man skapar en Category till databas. Detta för att undvika att skapa en instans . En del av "Dependency Inversion Principle"
+// Jag har  SRP i det här fallet och delar upp Factory Och ha det lite renare i kontrollern
+public interface ICategoryFactory : IFactory
 {
-
-    /// CategoryFactory används för att skapa en instans av Category modellen när man skapar en Category till databas. Detta för att undvika att skapa en instans . En del av "Dependency Inversion Principle"
-    // Jag har  SRP i det här fallet och delar upp Factory Och ha det lite renare i kontrollern
-    public interface ICategoryFactory : IFactory
+    CategoryEntity categoryEntity();
+    
+    Category category(CategoryEntity categoryEntity);
+    List<Category> CategoryList();
+}
+public class CategoryFactory :ICategoryFactory
+{
+    public CategoryEntity categoryEntity()
     {
-        CategoryEntity categoryEntity();
-        
-        Category category(CategoryEntity categoryEntity);
-        List<Category> CategoryList();
+        return new CategoryEntity();
     }
-
-    public class CategoryFactory :ICategoryFactory
+     public Category category(CategoryEntity categoryEntity)
     {
-        public CategoryEntity categoryEntity()
+        return new Category
         {
-            return new CategoryEntity();
-        }
-         public Category category(CategoryEntity categoryEntity)
-        {
-            return new Category
-            {
-                Name = categoryEntity.Name,
-                Imag = categoryEntity.Imag
-            };
-        }
-     
-
-        public List<Category> CategoryList()
-        {
-            return new List<Category>();
-        }
+            Name = categoryEntity.Name,
+            Imag = categoryEntity.Imag
+        };
+    }
+ 
+    public List<Category> CategoryList()
+    {
+        return new List<Category>();
     }
 }

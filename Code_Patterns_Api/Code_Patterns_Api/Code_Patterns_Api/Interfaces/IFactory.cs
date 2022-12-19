@@ -1,6 +1,5 @@
-﻿namespace Code_Patterns_Api.Interfaces
+﻿namespace Code_Patterns_Api.Interfaces;
+
+public interface IFactory
 {
-    public interface IFactory
-    {
-    }
 }
